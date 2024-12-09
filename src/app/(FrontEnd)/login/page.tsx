@@ -35,7 +35,7 @@ export default function Login() {
               Sign In
             </button>
             <p className="text-sm text-gray-600">
-              Don't have an account?{" "}
+              Donot have an account?{" "}
               <a href="#" className="text-[#FB2E86] hover:underline">
                 Create Account
               </a>
