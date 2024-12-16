@@ -21,12 +21,13 @@ export default function Cart() {
                     <tr key={index}>
                       <td className="px-2 py-4">
                         <div className="flex items-center gap-4">
+                        <a href="/productdetail">
                           <img
                             src={`img/products/lp${index + 1}.png`}
                             alt="Product"
                             className="w-12 h-12 object-contain"
-                          />
-                          <p className="text-sm font-semibold text-gray-800">Black T-Shirt</p>
+                          /></a>
+                          <p className="text-sm font-semibold text-gray-800"><a href="/productdetail">Black T-Shirt</a></p>
                         </div>
                       </td>
                       <td className="px-2 py-4">
@@ -49,12 +50,15 @@ export default function Cart() {
               </table>
             </div>
             <div className="flex flex-col sm:flex-row justify-between mt-4 space-y-2 sm:space-y-0 sm:space-x-4">
+              <a href="/shopgrid">
               <button className="w-full sm:w-auto px-4 py-2 border rounded text-white bg-[#FB2E86]">
                 Return to Shop
               </button>
+              </a>
+              <a href="/cart">
               <button className="w-full sm:w-auto px-4 py-2 border rounded text-white bg-[#FB2E86]">
                 Update Cart
-              </button>
+              </button></a>
             </div>
           </div>
 
@@ -62,7 +66,7 @@ export default function Cart() {
           <div className="bg-white shadow-sm rounded-lg p-4">
             <div className="mb-6">
               <h3 className="text-lg font-bold text-[#1D3178]">Cart Total</h3>
-              <div className=" bg-[#F4F4FC] mb-6">
+              <div className=" bg-[#F4F4FC] mb-6 p-10">
               <ul className="divide-y text-gray-600 bg-[#F4F4FC]">
                 <li className="flex justify-between py-3 text-[#1D3178]">
                   <span>Subtotal</span>
@@ -77,15 +81,16 @@ export default function Cart() {
                   <span>$41.00</span>
                 </li>
               </ul>
-              <button className="w-full mt-6 py-2 bg-[#19D16F] text-white font-semibold rounded hover:bg-green-700">
+              <a href="/checkout">
+              <button className="w-full mt-6 py-2 bg-[#19D16F] text-white font-semibold rounded hover:bg-[#19D16F]">
                 Proceed to Checkout
-              </button>
+              </button></a>
               </div>
             </div>
 
             <div>
               <h3 className="text-lg font-bold text-[#1D3178] mb-4">Calculate Shipping</h3>
-              <div className=" bg-[#F4F4FC] mb-6">
+              <div className=" bg-[#F4F4FC] mb-6 p-10">
                 <ul className="divide-y text-gray-400 bg-[#F4F4FC]">
                 <li className="flex justify-between py-3">
                   <span>Shipping Method</span>
@@ -96,7 +101,7 @@ export default function Cart() {
                   <span className="font-bold">$4.00</span>
                 </li>
               </ul>
-              <button className="w-full mt-6 py-2 bg-[#FB2E86] text-white font-semibold rounded hover:bg-red-700">
+              <button className="w-full mt-6 py-2 bg-[#FB2E86] text-white font-semibold rounded hover:bg-[#FB2E86]">
                 Update Estimate
               </button>
               </div>

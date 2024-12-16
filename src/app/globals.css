@@ -13,3 +13,11 @@
         padding-left: 60px;
     }
 /*VMenu css end*/
+
+.josefin{
+    font-family: var(--font--josefin--);
+}
+
+h2,h3 {
+    font-family: var(--font--josefin--);
+}

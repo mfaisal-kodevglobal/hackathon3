@@ -1,9 +1,9 @@
 export default function ShopexOffer() {
   return (
     <>
-      <div className="font-[sans-serif] p-4 mx-auto lg:max-w-5xl md:max-w-3xl max-w-lg">
-        <h2 className="text-4xl font-extrabold text-gray-800 mb-12 text-center">
-          Shopex Offers
+      <div className="font-[sans-serif] pX-4 mx-auto lg:max-w-5xl md:max-w-3xl max-w-lg ">
+        <h2 className="text-4xl font-extrabold text-[#151875] text-center">
+          What Shopex Offers!
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {[
@@ -42,13 +42,13 @@ export default function ShopexOffer() {
           ].map((product, index) => (
             <div
               key={index}
-              className="w-[270px] h-[361px] bg-white cursor-pointer hover:shadow-lg transition-all rounded-md flex flex-col justify-center items-center text-center p-4"
+              className="w-[270px] h-[270px] bg-white cursor-pointer hover:shadow-lg transition-all rounded-md flex flex-col justify-center items-center text-center px-4"
             >
-              <div className="bg-gray-100 flex justify-center items-center w-full h-48 rounded-md">
+              <div className="bg-white flex justify-center items-center w-full rounded-md">
                 <img
                   src={product.img}
                   alt={product.title}
-                  className="h-32 w-auto object-contain"
+                  className="w-[20%] object-contain"
                 />
               </div>
               <div className="mt-4">

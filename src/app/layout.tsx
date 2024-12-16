@@ -1,8 +1,16 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import  Header  from './components/Header'
+import  HeaderTopBar  from './components/HeaderTopBar'
 import  Footer  from './components/Footer'
+import { Josefin_Sans } from 'next/font/google'
+import HeaderMenu from './components/HeaderMenu'
+
+const josefin_init = Josefin_Sans({
+  subsets:["latin"],
+  weight:["100", "300", "700"],
+  variable:"--font--josefin--"
+});
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,8 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
+      <body className={josefin_init.variable}>
+        <HeaderTopBar />
+        <HeaderMenu/>
         {children}
         <Footer/>
         </body>

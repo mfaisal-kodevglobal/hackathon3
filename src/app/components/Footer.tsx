@@ -14,12 +14,12 @@ export default function Footer() {
                 className="p-2 border border-gray-300 rounded-md w-full"
               />
               <button className="bg-[#FB2E86] text-white py-2 px-4 rounded-md">
-                Subscribe
+                SignUp
               </button>
             </div>
             <h3 className="text-black font-semibold text-lg mt-6">Contact Info</h3>
             <p className="text-[#8A8FB9] text-sm">
-              17 Princes Road London, Greater London NW18RG, UK
+              17 Princes Road London, Greater London NW1 8JR, UK
             </p>
           </div>
 
@@ -27,16 +27,19 @@ export default function Footer() {
             <h4 className="text-black font-semibold text-lg mb-6">Categories</h4>
             <ul className="space-y-5">
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Our Story</a>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Laptops & Computers</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Newsroom</a>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Cameras & Photography</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Careers</a>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Smart Phones & Tablets</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Blog</a>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Video Games & Consoles</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Waterproof Headphones</a>
               </li>
             </ul>
           </div>
@@ -45,16 +48,19 @@ export default function Footer() {
             <h4 className="text-black font-semibold text-lg mb-6">Customer Care</h4>
             <ul className="space-y-5">
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Web Development</a>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">My Account</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Testing Automation</a>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Discount</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">AWS Development Services</a>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Returns</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Mobile App Development</a>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Order History</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Order Tracking</a>
               </li>
             </ul>
           </div>
@@ -63,16 +69,22 @@ export default function Footer() {
             <h4 className="text-black font-semibold text-lg mb-6">Pages</h4>
             <ul className="space-y-5">
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Accessibility</a>
+                <a href="/blog" className="text-[#8A8FB9] text-[15px] transition-all">Blog</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">About</a>
+                <a href="/shopgrid" className="text-[#8A8FB9] text-[15px] transition-all">Browse the Shop</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Contact</a>
+                <a href="/shopleftsidebar" className="text-[#8A8FB9] text-[15px] transition-all">Category</a>
               </li>
               <li>
-                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Learn more</a>
+                <a href="/about" className="text-[#8A8FB9] text-[15px] transition-all">Pre-Built Pages</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">Visual Composer Elements</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" className="text-[#8A8FB9] text-[15px] transition-all">WooCommerce Pages</a>
               </li>
             </ul>
           </div>

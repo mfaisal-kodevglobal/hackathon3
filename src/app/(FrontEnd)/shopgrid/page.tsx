@@ -184,14 +184,15 @@ export default function ShopGrid() {
                   className="w-full h-full bg-white cursor-pointer hover:shadow-lg transition-all rounded-md flex flex-col justify-center items-center text-center p-4"
                 >
                   <div className="bg-gray-100 flex justify-center items-center w-full h-48 rounded-md">
+                  <a href="/productdetail">
                     <img
                       src={product.img}
                       alt={product.title}
                       className="h-32 w-auto object-contain"
-                    />
+                    /></a>
                   </div>
                   <div className="mt-2">
-                    <h3 className="text-base text-[#FB2E86]">{product.title}</h3>
+                    <h3 className="text-base text-[#FB2E86]"><a href="/productdetail">{product.title}</a></h3>
                     <p className="text-sm text-gray-500">{product.colorCode}</p>
                     <p className="text-sm text-[#151875]">{product.productCode}</p>
                     <h4 className="text-xl text-[#151875] font-bold mt-1">

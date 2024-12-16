@@ -15,11 +15,11 @@ export default function OrderCompleted() {
             </div>
             
             {/* Second image centered */}
-            <div className="flex justify-center w-1/2">
+            <div className="flex justify-center items-center w-1/12">
               <img
                 src="img/ordercompleted.png"
                 alt="Order Completed"
-                className="w-24 h-24 object-contain"
+                className="w-24 h-24 object-contain mr-24"
               />
             </div>
           </div>

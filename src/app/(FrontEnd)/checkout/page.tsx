@@ -18,7 +18,7 @@ export default function Checkout() {
                   <h2 className="text-2xl font-bold text-[#1D3178]">
                     Contact Information
                   </h2>
-                  <a href="#" className="text-blue-600 hover:underline text-sm">
+                  <a href="/login" className="text-blue-600 hover:underline text-sm">
                     Already have an account? Login
                   </a>
                 </div>
@@ -96,12 +96,12 @@ export default function Checkout() {
                     />
                   </div>
                   <div className="mt-8 flex justify-between">
-                    <button
+                  <a href="/shopgrid"><button
                       type="button"
                       className="px-4 py-2 border rounded text-white bg-[#FB2E86] hover:bg-[#FB2E86]/90"
                     >
                       Continue Shopping
-                    </button>
+                    </button></a>
                   </div>
                 </form>
               </div>
@@ -118,14 +118,15 @@ export default function Checkout() {
                       key={product}
                       className="flex items-start gap-4  p-4 border-b-2"
                     >
+                      <a href="/productdetail">
                       <img
                         src={`img/checkout${product}.png`}
                         alt={`Product ${product}`}
                         className="w-16 h-16 object-contain bg-[#F4F4FC]"
-                      />
+                      /></a>
                       <div className="flex-grow">
                         <h3 className="text-black font-semibold">
-                         Ut diam consequat
+                        <a href="/productdetail">Ut diam consequat</a>
                         </h3>
                         <div className="flex flex-wrap justify-between items-center">
                           <div>
@@ -170,9 +171,10 @@ export default function Checkout() {
                       Shipping and text calculated at checkout.
                     </label>
                   </div>
-                      <button className="w-full mt-6 py-2 bg-[#19D16F] text-white font-semibold rounded hover:bg-green-700">
+                  <a href="/ordercompleted">
+                      <button className="w-full mt-6 py-2 bg-[#19D16F] text-white font-semibold rounded hover:bg-[#19D16F]">
                         Proceed to Checkout
-                      </button>
+                      </button></a>
                     </div>
                   </div>
 

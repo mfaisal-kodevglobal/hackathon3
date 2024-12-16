@@ -4,6 +4,7 @@ import LatestProducts from "./components/LatestProducts";
 import ShopexOffer from "./components/ShopexOffer";
 import OffProducts from "./components/OffProducts";
 import LatestBlog from "./components/LatestBlog";
+import TopCategories from "./components/TopCategories";
 
 export default function Home() {
   return (
@@ -39,27 +40,30 @@ export default function Home() {
           <ShopexOffer />
         </div>
 
-{/* Promotional Banner 1 */}
-<div className="bg-[#F1F0FF] py-8">
-  <div className="container mx-auto px-4 flex justify-center">
-    <div
-      className="w-1/2 rounded-md overflow-hidden shadow-sm"
-      style={{
-        minHeight: "370px", // Ensure the image container has a minimum height
-        backgroundImage: "url('/img/promotional1.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    ></div>
-  </div>
-</div>
+        {/* Promotional Banner 1 */}
+        <div className="mt-8">
+          <div className="bg-[#F1F0FF] py-8">
+            <div className="container mx-auto px-4 flex justify-center">
+              <div
+                className="w-1/2 rounded-md overflow-hidden shadow-sm"
+                style={{
+                  minHeight: "370px", // Ensure the image container has a minimum height
+                  backgroundImage: "url('/img/promotional1.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></div>
+            </div>
+          </div>  
+        </div>
+        
 
 
 
 
         {/* TrendingProducts */}
-        <div className="mt-3">
+        <div className="mt-10">
           <TrendingProducts />
         </div>
 
@@ -69,24 +73,32 @@ export default function Home() {
         </div>
 
         {/* discountitem */}
-        <div className="font-[sans-serif] p-4 mx-auto ">
-         
-  <div className=" mx-auto  flex justify-center">
-  <h3>Discount Items</h3><br/><br/>
-    <div
-      className="w-1/2 rounded-md overflow-hidden shadow-sm"
-      style={{
-        minHeight: "370px", // Ensure the image container has a minimum height
-        backgroundImage: "url('/img/discountitem.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    ></div>
-  </div>
-</div>
+        <div className="mt-8">
+          <div className="font-[sans-serif] p-4 mx-auto mb-5 lg:max-w-5xl md:max-w-3xl max-w-lg">
+            <h2 className="text-4xl font-extrabold text-[#151875] text-center">
+            Discount Items
+            </h2>
+            <div className="flex flex-wrap justify-center items-center space-x-5 mb-5">
+                  <span className="text-[#FB2E86]"><span  className="underline">Wood Chair</span> .</span>
+                  <span className="text-[#151875]">Plastic Chair</span>
+                  <span className="text-[#151875]">Sofa Collecton</span>
+            </div>
+            <div className="">
+              <div
+                  className="w-full rounded-md overflow-hidden shadow-sm"
+                  style={{
+                    minHeight: "370px", // Ensure the image container has a minimum height
+                    backgroundImage: "url('/img/discountitem.png')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                ></div>
+            </div>
+          </div>
+        </div>  
 
-
+<TopCategories />
 
 {/* latestupdates */}
 <div className="bg-[#F1F0FF] py-8">

@@ -262,17 +262,18 @@ export default function ShopLeftSidebar() {
                 >
                   {/* Left Side: Image */}
                   <div className="w-48 h-48 flex justify-center items-center">
+                  <a href="/productdetail">
                     <img
                       src={product.img}
                       alt={product.title}
                       className="object-contain w-full h-full rounded-md"
-                    />
+                    /></a>
                   </div>
 
                   {/* Right Side: Details */}
                   <div className="ml-6 flex flex-col justify-center">
                     <h3 className="text-lg font-semibold text-[#FB2E86]">
-                      {product.title}
+                    <a href="/productdetail">{product.title}</a>
                     </h3>
                     <p className="text-gray-600 text-sm mt-1">
                       {product.description}
