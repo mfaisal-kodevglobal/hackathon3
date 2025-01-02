@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import  HeaderTopBar  from './components/HeaderTopBar'
 import  Footer  from './components/Footer'
 import { Josefin_Sans } from 'next/font/google'
 import HeaderMenu from './components/HeaderMenu'
@@ -27,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={josefin_init.variable}>
-        <HeaderTopBar />
+       
         <HeaderMenu/>
         {children}
         <Footer/>
