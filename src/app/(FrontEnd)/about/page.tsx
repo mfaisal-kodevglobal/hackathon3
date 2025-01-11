@@ -13,7 +13,7 @@ export default function About() {
               About Us
             </h2>
             <p className="text-sm text-gray-600">
-              Home. Pages. <span className="text-[#FB2E86]">About Us Page</span>
+              Home. Pages. <span className="text-[#FB2E86]">About Us</span>
             </p>
           </div>
         </div>
