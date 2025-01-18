@@ -1,4 +1,8 @@
-export default function TrendingProducts() {
+import { GetTrendingProductsData } from "@/sanity/sanaity.query";
+
+
+export default async function TrendingProducts() {
+     const productData = await GetTrendingProductsData();
   return (
     <>
       <div className="font-[sans-serif] p-4 mx-auto lg:max-w-5xl md:max-w-3xl max-w-lg">
@@ -6,7 +10,7 @@ export default function TrendingProducts() {
           Trending Products
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-          {[
+          {/* {[
             {
               img: "img/products/tp1.png",
               title: "Cantilever chair",
@@ -39,15 +43,17 @@ export default function TrendingProducts() {
               price: "$26.00",
               discountPrice: "$42.00",
             },
-          ].map((product, index) => (
+          ]}; */}
+          {
+          productData.map((product:any, index:any) => (
             <div
               key={index}
               className="w-[270px] h-[310px] bg-white hover:shadow-lg transition-all rounded-md flex flex-col justify-center items-center text-center p-4"
             >
               <div className="bg-gray-100 flex justify-center items-center w-full h-48 rounded-md">
-              <a href="/productdetail">
+              <a href={`/productdetail/${product.slug}`}>
                 <img
-                  src={product.img}
+                  src={product.image}
                   alt={product.title}
                   className="h-32 w-auto object-contain"
                 /></a>
@@ -57,11 +63,11 @@ export default function TrendingProducts() {
                 <a href="/productdetail">{product.title}</a></h3>
                 <h4 className="text-xl text-[#151875]  mt-2">
                   {product.price}
-                  {product.discountPrice && (
+                 
                     <span className="text-sm text-gray-300 ml-2">
-                      <del>{product.discountPrice}</del>
+                      <del>$42.00</del>
                     </span>
-                  )}
+                  
                 </h4>
               </div>
             </div>

@@ -6,7 +6,9 @@ import OffProducts from "./components/OffProducts";
 import LatestBlog from "./components/LatestBlog";
 import TopCategories from "./components/TopCategories";
 
-export default function Home() {
+
+export default async  function Home() {
+
   return (
     <>
       <div className="container mx-auto px-4 lg:px-8">

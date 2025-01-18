@@ -1,4 +1,7 @@
-export default function ShopList() {
+import { GetShopListData } from "@/sanity/sanaity.query";
+
+export default async function ShopList() {
+  const productData = await GetShopListData();
   return (
     <>
       <div>
@@ -11,14 +14,11 @@ export default function ShopList() {
             </div>
           </div>
         </div>
-
-        
-
         <div className="container mx-auto px-4 sm:px-8 lg:px-16">
           <div className="font-[sans-serif] p-4 mx-auto lg:max-w-5xl md:max-w-3xl max-w-lg">
 
- {/* Title and Info Section */}
- <div className="flex items-center justify-between mt-4 flex-col sm:flex-row">
+        {/* Title and Info Section */}
+        <div className="flex items-center justify-between mt-4 flex-col sm:flex-row">
               <div className="mb-4 sm:mb-0">
                 <h3 className="text-base text-[#151875] font-semibold">
                   Ecommerce Accessories and Fashion Items
@@ -76,92 +76,17 @@ export default function ShopList() {
                 </div>
               </div>
             </div>
-
-
             <div className="mt-4">
-              {[
-                {
-                  img: "img/products/slp1.png",
-                  title: "Cantilever Chair",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$120",
-                },
-                {
-                  img: "img/products/slp2.png",
-                  title: "Modern Sofa",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$960",
-                },
-                {
-                  img: "img/products/slp3.png",
-                  title: "Elegant Table",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$370",
-                },
-                {
-                  img: "img/products/slp4.png",
-                  title: "Wooden Chair",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$375",
-                },
-                {
-                  img: "img/products/slp5.png",
-                  title: "Stylish Bed",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$120",
-                },
-                {
-                  img: "img/products/slp6.png",
-                  title: "Office Desk",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$960",
-                },
-                {
-                  img: "img/products/sgddp7.png",
-                  title: "Lounge Chair",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$370",
-                },
-                {
-                  img: "img/products/sgddp8.png",
-                  title: "Coffee Table",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$375",
-                },
-                {
-                  img: "img/products/sgddp9.png",
-                  title: "Book Shelf",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$120",
-                },
-                {
-                  img: "img/products/sgddp10.png",
-                  title: "Dining Chair",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$960",
-                },
-                {
-                  img: "img/products/sgddp11.png",
-                  title: "Study Table",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$370",
-                },
-                {
-                  img: "img/products/sgddp12.png",
-                  title: "Accent Chair",
-                  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                  price: "$375",
-                },
-              ].map((product, index) => (
+              {productData.map((product:any, index:any) => (
                 <div
                   key={index}
                   className="flex items-center bg-white rounded-md shadow-sm p-4 mb-4 hover:shadow-lg transition-all"
                 >
                   {/* Left Side: Image */}
                   <div className="w-48 h-48 flex justify-center items-center">
-                  <a href="/productdetail">
+                  <a href={`/productdetail/${product.slug}`}>
                     <img
-                      src={product.img}
+                      src={product.image}
                       alt={product.title}
                       className="object-contain w-full h-full rounded-md"
                     /></a>

@@ -1,6 +1,9 @@
 import { clsx } from "clsx";
+import { GetLeatestProductsData } from "@/sanity/sanaity.query";
 
-export default function LatestProducts() {
+
+export default async function LatestProducts() {
+    const productData = await GetLeatestProductsData();
   return (
     <>
       <div className="font-[sans-serif] p-4 mx-auto lg:max-w-5xl md:max-w-3xl max-w-lg">
@@ -15,7 +18,7 @@ export default function LatestProducts() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
          
-          {[
+          {/* {[
             {
               img: "img/products/lp1.png",
               title: "Cantilever Chair",
@@ -59,28 +62,29 @@ export default function LatestProducts() {
             {
               img: "img/products/lp6.png",
               title: "Cantilever Chair",
-              colorCode: "Color: Green",
-              productCode: "Code: Y523206",
               price: "$26",
               discountPrice: null,
             },
-          ].map((product, index) => (
+          ]}; */}
+
+          {
+          productData.map((product:any, index:any) => (
             <div
               key={index}
               className="w-full bg-white hover:shadow-lg transition-all rounded-md flex flex-col justify-between text-center p-2"
 
             >
               <div className={clsx(" flex justify-center items-center w-full h-48 rounded-md", { "bg-gray-100": index == 0 }, { "bg-[#FFFFFF]": index == 1 }, { "bg-gray-100": index == 2 }, { "bg-gray-100": index == 3 }, { "bg-gray-100": index == 4 }, { "bg-gray-100": index == 5 })}>
-                <a href="/productdetail">
+              <a href={`/productdetail/${product.slug}`}>
                   <img
-                    src={product.img}
+                    src={product.image}
                     alt={product.title}
                     className="h-32 w-full object-contain"
                   />
                 </a>
               </div>
               <div className="flex items-center justify-between mt-4">
-                <h3 className="text-base text-[#151875] ">
+                <h3 className="text-base text-[#151875]">
                   <a href="/productdetail">
                     {product.title}
                   </a>

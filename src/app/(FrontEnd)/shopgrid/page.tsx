@@ -1,4 +1,7 @@
-export default function ShopGrid() {
+import { GetShopGridData } from "@/sanity/sanaity.query";
+
+export default async function ShopGrid() {
+    const productData = await GetShopGridData();
   return (
     <>
       <div>
@@ -76,12 +79,8 @@ export default function ShopGrid() {
                 </div>
               </div>
             </div>
-
-
-
-
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {[
+              {/* {[
                 {
                   img: "img/products/sgddp1.png",
                   title: "Cantilever chair",
@@ -178,30 +177,29 @@ export default function ShopGrid() {
                   price: "$375",
                   discountPrice: null,
                 },
-              ].map((product, index) => (
+              ]} */}
+              {productData.map((product:any, index:any) => (
                 <div
                   key={index}
                   className="w-full h-full bg-white cursor-pointer hover:shadow-lg transition-all rounded-md flex flex-col justify-center items-center text-center p-4"
                 >
                   <div className="bg-gray-100 flex justify-center items-center w-full h-48 rounded-md">
-                  <a href="/productdetail">
+                  <a href={`/productdetail/${product.slug}`}>
                     <img
-                      src={product.img}
+                      src={product.image}
                       alt={product.title}
                       className="h-32 w-auto object-contain"
                     /></a>
                   </div>
                   <div className="mt-2">
                     <h3 className="text-base text-[#FB2E86]"><a href="/productdetail">{product.title}</a></h3>
-                    <p className="text-sm text-gray-500">{product.colorCode}</p>
-                    <p className="text-sm text-[#151875]">{product.productCode}</p>
+                    <p className="text-sm text-gray-500">-</p>
+                    <p className="text-sm text-[#151875]"> - - - </p>
                     <h4 className="text-xl text-[#151875] font-bold mt-1">
                       {product.price}
-                      {product.discountPrice && (
                         <span className="text-sm text-gray-500 ml-2">
-                          <del>{product.discountPrice}</del>
+                          <del>44.00</del>
                         </span>
-                      )}
                     </h4>
                   </div>
                 </div>

@@ -1,4 +1,7 @@
-export default function ShopLeftSidebar() {
+import { GetShopLeftData } from "@/sanity/sanaity.query";
+
+export default async function ShopLeftSidebar() {
+      const productData = await GetShopLeftData();
   return (
     <>
       <div>
@@ -182,7 +185,7 @@ export default function ShopLeftSidebar() {
               {/* Product List */}
               <div className="leftbar">
               <div className="">
-              {[
+              {/* {[
                 {
                   img: "img/products/slsp1.png",
                   title: "Cantilever Chair",
@@ -255,16 +258,18 @@ export default function ShopLeftSidebar() {
                   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                   price: "$375",
                 },
-              ].map((product, index) => (
+              ]} */}
+
+              {productData.map((product:any, index:any) => (
                 <div
                   key={index}
                   className="flex items-center bg-white rounded-md shadow-sm p-4 mb-4 hover:shadow-lg transition-all"
                 >
                   {/* Left Side: Image */}
                   <div className="w-48 h-48 flex justify-center items-center">
-                  <a href="/productdetail">
+                  <a href={`/productdetail/${product.slug}`}>
                     <img
-                      src={product.img}
+                      src={product.image}
                       alt={product.title}
                       className="object-contain w-full h-full rounded-md"
                     /></a>

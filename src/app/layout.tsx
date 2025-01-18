@@ -5,6 +5,7 @@ import  HeaderTopBar  from './components/HeaderTopBar'
 import  Footer  from './components/Footer'
 import { Josefin_Sans } from 'next/font/google'
 import HeaderMenu from './components/HeaderMenu'
+import { CartProvider } from '@/app/context/CartContext';
 
 const josefin_init = Josefin_Sans({
   subsets:["latin"],
@@ -27,10 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={josefin_init.variable}>
+      <CartProvider>
         <HeaderTopBar />
         <HeaderMenu/>
         {children}
         <Footer/>
+      </CartProvider>
         </body>
     </html>
   )
